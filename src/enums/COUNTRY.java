@@ -12,4 +12,9 @@ public enum COUNTRY {
     public String getLanguage() {
         return this.language;
     }
+
+    @Override
+    public String toString() {
+        return language;
+    }
 }

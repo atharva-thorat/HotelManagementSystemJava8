@@ -1,6 +1,5 @@
 package domain;
 
-import enums.COUNTRY;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,45 +16,45 @@ public class Guest {
 
     private String name;
     private String dateOfBirth;
-    private COUNTRY country;
+    private String country;
     private String language;
     private String hobby;
 
-    private static List<Guest> populateGuests() {
+    public static List<Guest> populateGuests() {
         List<Guest> guestList = new ArrayList<>();
         guestList.add(Guest.builder()
                 .name("Madhav")
                 .dateOfBirth("1998/11/25")
-                .country(COUNTRY.USA)
+                .country("USA")
                 .language("English").hobby("Eat")
                 .build());
 
         guestList.add(Guest.builder()
                 .name("Gopal")
                 .dateOfBirth("1998/11/25")
-                .country(COUNTRY.CHINA)
-                .language("English").hobby("Eat")
+                .country("China")
+                .language("Chinese").hobby("Read")
                 .build());
 
         guestList.add(Guest.builder()
                 .name("Lakshman")
                 .dateOfBirth("1998/11/25")
-                .country(COUNTRY.SPAIN)
-                .language("English").hobby("Eat")
+                .country("Spain")
+                .language("Spanish").hobby("Eat")
                 .build());
 
         guestList.add(Guest.builder()
                 .name("Lucky")
                 .dateOfBirth("1998/11/25")
-                .country(COUNTRY.FRANCE)
-                .language("English").hobby("Eat")
+                .country("France")
+                .language("French").hobby("Sports")
                 .build());
 
         guestList.add(Guest.builder()
                 .name("Jack")
                 .dateOfBirth("1998/11/25")
-                .country(COUNTRY.GERMANY)
-                .language("English").hobby("Eat")
+                .country("Germany")
+                .language("German").hobby("Eat")
                 .build());
 
         return guestList;
